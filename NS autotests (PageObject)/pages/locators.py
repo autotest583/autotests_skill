@@ -7,7 +7,7 @@ class EventsPageLocators(): # класс описывает локаторы с�
     # локаторы главной страницы "События"
     event_name = (By.CSS_SELECTOR, 'input[placeholder="Название"]') # поле поиска "Название"
     status = (By.CSS_SELECTOR, 'input[placeholder="Статус"]') # фильтр "Статус"
-    checkbox_id = (By.CSS_SELECTOR, 'span[class="el-checkbox__input"]') # чекбокс "Отобразить ID"
+    checkbox_id = (By.XPATH, '//span[contains(@class,"el-checkbox__input")]') # чекбокс "Отобразить ID"
     checkbox_id_label = (By.CSS_SELECTOR, 'span[class="el-checkbox__label"]')  # лейбл чекбокса "Отобразить ID"
     add_button = (By.CSS_SELECTOR, 'button[class="el-button filter-item el-button--primary el-button--medium"]') # кнопка "Добавить"
     table = (By.CSS_SELECTOR, 'table[class="el-table__header"]') # таблица
