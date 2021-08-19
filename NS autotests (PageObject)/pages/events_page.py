@@ -108,3 +108,11 @@ class EventsPage(BasePage):
     def events_url(self): # метод реализует проверку url страницы "События"
         url = self.browser.current_url
         assert url == "https://nsstage.skillbox.ru/#/events/index"
+
+    def events_checkbox_click(self): # клик по чекбоксу
+        self.browser.find_element(*EventsPageLocators.checkbox_id).click()
+
+    def events_checkbox_active(self): # чекбокс активен
+        checkbox = self.browser.find_element(*EventsPageLocators.checkbox_id).get_attribute("class")
+        assert checkbox == "el-checkbox__input is-checked"
+
